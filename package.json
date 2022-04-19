@@ -21,6 +21,7 @@
   "homepage": "https://github.com/ccardoso97/paleteria#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "crud": "^0.0.28",
     "express": "^4.17.3",
     "node": "^17.7.2"
   },
