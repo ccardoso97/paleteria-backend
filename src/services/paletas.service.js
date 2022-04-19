@@ -1,3 +1,4 @@
+const Paleta = require('../models/Paleta');
 const paletas = [
   {
     id: 1,
