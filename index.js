@@ -5,6 +5,8 @@ const app = express();
 const route = require('./src/routes/paletas.route');
 const connectToDatabase = require('./src/database/database');
 
+connectToDatabase();
+
 app.use(express.json());
 app.use(cors());
 app.use('/paletas', route);
