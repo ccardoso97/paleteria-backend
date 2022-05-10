@@ -5,10 +5,12 @@ const app = express();
 const route = require('./src/routes/paletas.route');
 const connectToDatabase = require('./src/database/database');
 
+app.use(express.json());
+
 connectToDatabase();
 
-app.use(express.json());
 app.use(cors());
+
 app.use('/paletas', route);
 
 app.listen(port, () => {

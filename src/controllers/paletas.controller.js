@@ -1,13 +1,15 @@
-const paletasService = require('../services/paletas.service');
 const mongoose = require('mongoose');
+const paletasService = require('../services/paletas.service');
 
 const findPaletasController = async (req, res) => {
   const allPaletas = await paletasService.findPaletasService();
+
   if (allPaletas.length == 0) {
     return res
       .status(400)
       .send({ message: 'Não existe nenhuma paleta cadastrada' });
   }
+
   res.send(allPaletas);
 };
 
@@ -22,6 +24,7 @@ const findPaletaByIdController = async (req, res) => {
 
   res.send(chosenPaleta);
 };
+
 const createPaletaController = async (req, res) => {
   const paleta = req.body;
   const newPaleta = await paletasService.createPaletaService(paleta);
